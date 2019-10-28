@@ -3,9 +3,10 @@
 #include "Writable_command_line_arguments.hxx"
 
 
-namespace jmsf {
-namespace gtest_customization {
-namespace faggotorium {
+namespace jmsd {
+namespace tpa {
+namespace gtm {
+namespace modification {
 
 
 class Writable_command_line_arguments {
@@ -23,12 +24,12 @@ public:
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 public:
-	Writable_command_line_arguments(const int argument_counter, const char *const argument_string_array[] ) noexcept;
+	Writable_command_line_arguments( int const argument_counter, char const *const argument_string_array[] ) noexcept;
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 public:
-	Writable_command_line_arguments( const Writable_command_line_arguments &another ) = delete;
-	const Writable_command_line_arguments &operator =( const Writable_command_line_arguments &another ) = delete;
+	Writable_command_line_arguments( Writable_command_line_arguments const &another ) = delete;
+	const Writable_command_line_arguments &operator =( Writable_command_line_arguments const &another ) = delete;
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 public:
@@ -37,7 +38,7 @@ public:
 
 // # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 private:
-	const int _argument_counter;
+	int const _argument_counter;
 	int _writable_argument_counter;
 	char **_writable_argument_string_array;
 	char **_copy_of_writable_argument_string_array;
@@ -51,6 +52,7 @@ private:
 };
 
 
-} // namespace faggotorium
-} // namespace gtest_customization
-} // namespace jmsf
+} // namespace modification
+} // namespace gtm
+} // namespace tpa
+} // namespace jmsd

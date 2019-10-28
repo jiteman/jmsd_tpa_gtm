@@ -5,9 +5,10 @@
 #include <cstring>
 
 
-namespace jmsf {
-namespace gtest_customization {
-namespace faggotorium {
+namespace jmsd {
+namespace tpa {
+namespace gtm {
+namespace modification {
 
 
 int *Writable_command_line_arguments::take_argument_counter() noexcept {
@@ -55,10 +56,10 @@ Writable_command_line_arguments::Writable_command_line_arguments( int const p_ar
 }
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-//Writable_command_line_arguments::Writable_command_line_arguments( const Writable_command_line_arguments &/*another*/ ) noexcept {
+//Writable_command_line_arguments::Writable_command_line_arguments( Writable_command_line_arguments const &/*another*/ ) noexcept {
 //}
 
-//const Writable_command_line_arguments &Writable_command_line_arguments::operator =( const Writable_command_line_arguments &another ) noexcept {
+//const Writable_command_line_arguments &Writable_command_line_arguments::operator =( Writable_command_line_arguments const &another ) noexcept {
 //	if ( &another == this ) return *this;
 
 //	// copy
@@ -83,7 +84,8 @@ Writable_command_line_arguments::Writable_command_line_arguments( int const p_ar
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 
-} // namespace faggotorium
-} // namespace gtest_customization
-} // namespace jmsf
+} // namespace modification
+} // namespace gtm
+} // namespace tpa
+} // namespace jmsd
 

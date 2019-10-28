@@ -2,22 +2,13 @@
 
 #include "Configurable_event_listener.hxx"
 
-
-#if defined( _MSC_VER )
-	#pragma warning( push )
-	#pragma warning( disable: 4668 ) // is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
-#endif
-
 #include "gmock/gmock.h"
 
-#if defined( _MSC_VER )
-	#pragma warning( pop )
-#endif
 
-
-namespace jmsf {
-namespace gtest_customization {
-namespace faggotorium {
+namespace jmsd {
+namespace tpa {
+namespace gtm {
+namespace modification {
 
 
 class Configurable_event_listener :
@@ -42,24 +33,25 @@ public:
 	~Configurable_event_listener() override final;
 
 	// virtuals TestEventListener
-	void OnTestProgramStart( const ::testing::UnitTest &unit_test ) override final;
-	void OnTestIterationStart( const ::testing::UnitTest &unit_test, int iteration ) override final;
-	void OnEnvironmentsSetUpStart( const ::testing::UnitTest &unit_test ) override final;
-	void OnEnvironmentsSetUpEnd( const ::testing::UnitTest &unit_test ) override final;
-	void OnTestCaseStart( const ::testing::TestCase &test_case ) override final;
-	void OnTestStart( const ::testing::TestInfo &test_info ) override final;
-	void OnTestPartResult( const ::testing::TestPartResult &result ) override final;
-	void OnTestEnd( const ::testing::TestInfo &test_info ) override final;
-	void OnTestCaseEnd( const ::testing::TestCase &test_case ) override final;
-	void OnEnvironmentsTearDownStart( const ::testing::UnitTest &unit_test ) override final;
-	void OnEnvironmentsTearDownEnd( const ::testing::UnitTest &unit_test ) override final;
-	void OnTestIterationEnd( const ::testing::UnitTest &unit_test, int iteration ) override final;
-	void OnTestProgramEnd( const ::testing::UnitTest &unit_test ) override final;
+	void OnTestProgramStart( ::testing::UnitTest const &unit_test ) override final;
+	void OnTestIterationStart( ::testing::UnitTest const &unit_test, int iteration ) override final;
+	void OnEnvironmentsSetUpStart( ::testing::UnitTest const &unit_test ) override final;
+	void OnEnvironmentsSetUpEnd( ::testing::UnitTest const &unit_test ) override final;
+	void OnTestCaseStart( ::testing::TestCase const &test_case ) override final;
+	void OnTestStart( ::testing::TestInfo const &test_info ) override final;
+	void OnTestPartResult( ::testing::TestPartResult const &result ) override final;
+	void OnTestEnd( ::testing::TestInfo const &test_info ) override final;
+	void OnTestCaseEnd( ::testing::TestCase const &test_case ) override final;
+	void OnEnvironmentsTearDownStart( ::testing::UnitTest const &unit_test ) override final;
+	void OnEnvironmentsTearDownEnd( ::testing::UnitTest const &unit_test ) override final;
+	void OnTestIterationEnd( ::testing::UnitTest const &unit_test, int iteration ) override final;
+	void OnTestProgramEnd( ::testing::UnitTest const &unit_test ) override final;
 	//~virtuals TestEventListener
 
 };
 
 
-} // namespace faggotorium
-} // namespace gtest_customization
-} // namespace jmsf
+} // namespace modification
+} // namespace gtm
+} // namespace tpa
+} // namespace jmsd

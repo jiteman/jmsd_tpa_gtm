@@ -4,13 +4,14 @@
 #include "jmsd/tpa/gtm/modification/Configurable_event_listener.h"
 
 
-namespace jmsf {
-namespace gtest_customization {
+namespace jmsd {
+namespace tpa {
+namespace gtm {
 
 
 int gmock_main( const int argc, const char *const argv[] ) {
 	{ // base and flags initialization
-		::jmsf::gtest_customization::faggotorium::Writable_command_line_arguments writable_command_line_arguments( argc, argv );
+		::jmsd::tpa::gtm::modification::Writable_command_line_arguments writable_command_line_arguments( argc, argv );
 
 		::testing::InitGoogleMock(
 			writable_command_line_arguments.take_argument_counter(),
@@ -25,7 +26,7 @@ int gmock_main( const int argc, const char *const argv[] ) {
 	{ // will only print errors, not successes
 		testing::TestEventListeners &listeners = testing::UnitTest::GetInstance()->listeners();
 		auto default_printer = listeners.Release( listeners.default_result_printer() );
-		auto the_listener = new ::jmsf::gtest_customization::faggotorium::Configurable_event_listener( default_printer );
+		auto the_listener = new ::jmsd::tpa::gtm::modification::Configurable_event_listener( default_printer );
 		listeners.Append( the_listener );
 	}
 
@@ -33,5 +34,6 @@ int gmock_main( const int argc, const char *const argv[] ) {
 }
 
 
-} // namespace gtest_customization
-} // namespace jmsf
+} // namespace gtm
+} // namespace tpa
+} // namespace jmsd

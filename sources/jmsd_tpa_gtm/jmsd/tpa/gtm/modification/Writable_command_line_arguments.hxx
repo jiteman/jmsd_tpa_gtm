@@ -1,15 +1,17 @@
 #pragma once
 
 
-namespace jmsf {
-namespace gtest_customization {
-namespace faggotorium {
+namespace jmsd {
+namespace tpa {
+namespace gtm {
+namespace modification {
 
 
 class Writable_command_line_arguments;
 
 
-} // namespace faggotorium
-} // namespace gtest_customization
-} // namespace jmsf
+} // namespace modification
+} // namespace gtm
+} // namespace tpa
+} // namespace jmsd
 
