@@ -30,8 +30,8 @@ Configurable_event_listener::Configurable_event_listener( TestEventListener *an_
 	_showTestCases = false; // false
 	_showTestNames = false; // false
 	_showSuccesses = false; // false
-	_showInlineFailures = false; // false
-	_showTestPartFailures = false; // false
+	_showInlineFailures = true; // true
+	_showTestPartFailures = true; // true
 	_showEnvironment = false; // false
 //*/
 }

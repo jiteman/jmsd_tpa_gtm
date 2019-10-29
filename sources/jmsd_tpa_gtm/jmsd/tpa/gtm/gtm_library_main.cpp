@@ -9,7 +9,7 @@ namespace tpa {
 namespace gtm {
 
 
-int gmock_main( const int argc, const char *const argv[] ) {
+int gmock_main( const int argc, const char *const argv[], bool const do_warn_about_mocks ) {
 	{ // base and flags initialization
 		::jmsd::tpa::gtm::modification::Writable_command_line_arguments writable_command_line_arguments( argc, argv );
 
@@ -20,7 +20,11 @@ int gmock_main( const int argc, const char *const argv[] ) {
 		// Ensures that the tests pass no matter what value of --gmock_catch_leaked_mocks and --gmock_verbose the user specifies.
 		testing::GMOCK_FLAG( catch_leaked_mocks ) = true;
 //		testing::GTEST_FLAG( list_tests ) = true;
-//		testing::GMOCK_FLAG( verbose ) = testing::internal::kWarningVerbosity;
+
+		testing::GMOCK_FLAG( verbose ) =
+			do_warn_about_mocks ?
+				testing::internal::kWarningVerbosity :
+				testing::internal::kErrorVerbosity;
 	}
 
 	{ // will only print errors, not successes
