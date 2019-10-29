@@ -22,7 +22,6 @@ include_directories( ${${PROJECT_NAME}_DEPENDENCY_DIRS_VAR} ${JMSD_THIS_PROJECT_
 
 ## this project headers and sources enumeration section
 foreach( directory ${tpc_google_mock_TEST_SOURCE_DIRS} )
-	message( STATUS "  " ${directory} )
 	list( APPEND test_header_and_source_files ${directory}/*.h* )
 	list( APPEND test_header_and_source_files ${directory}/*.c* )
 endforeach()
@@ -31,8 +30,6 @@ file( GLOB_RECURSE header_and_source_files
 	${JMSD_THIS_PROJECT_SOURCE_ROOT}/*.h*
 	${JMSD_THIS_PROJECT_SOURCE_ROOT}/*.c*
 	${test_header_and_source_files} )
-
-message( STATUS "[JMSD] Test source directories: header_and_source_files: ${header_and_source_files}" )
 
 set( JMSD_THIS_PROJECT_FILES_TO_REMOVE
 	"gtest_all_test.cc"
@@ -51,6 +48,7 @@ set( JMSD_THIS_PROJECT_FILES_TO_REMOVE
 	"googletest-break-on-failure-unittest_.cc"
 	"googletest-catch-exceptions-test_.cc"
 	"googletest-color-test_.cc"
+	"googletest-death-test-test.cc"
 	"googletest-env-var-test_.cc"
 	"googletest-filter-unittest_.cc"
 	"googletest-list-tests-unittest_.cc"
@@ -64,6 +62,7 @@ set( JMSD_THIS_PROJECT_FILES_TO_REMOVE
 	"googletest-uninitialized-test_.cc"
 	"gmock_all_test.cc"
 	"googletest-death-test_ex_test.cc"
+	"gmock_leak_test_.cc"
 	"gmock_link_test.h"
 	"gmock_link_test.cc"
 	"gmock_link2_test.cc"
@@ -71,8 +70,6 @@ set( JMSD_THIS_PROJECT_FILES_TO_REMOVE
 	"gmock_output_test_.cc"
 	"gmock_stress_test.cc" )
 JMSD_REMOVE_FILES_FROM_THE_LIST( header_and_source_files JMSD_THIS_PROJECT_FILES_TO_REMOVE )
-
-message( STATUS "[JMSD] Test source directories: header_and_source_files: ${header_and_source_files}" )
 
 add_library( ${PROJECT_NAME} SHARED ${header_and_source_files} )
 
