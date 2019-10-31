@@ -1,3 +1,5 @@
+#pragma once
+
 #include "gtm_library.h"
 
 
