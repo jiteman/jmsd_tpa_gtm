@@ -16,7 +16,7 @@ set( ${PROJECT_NAME}_DEPENDENCY_DIRS_VAR
 	${tpc_google_mock_DEPENDENCY_DIRS}
 	${JMSD_THIS_PROJECT_SOURCE_ROOT} )
 list( REMOVE_DUPLICATES ${PROJECT_NAME}_DEPENDENCY_DIRS_VAR )
-include_directories( ${${PROJECT_NAME}_DEPENDENCY_DIRS_VAR} ${JMSD_THIS_PROJECT_SOURCE_ROOT} )
+include_directories( ${${PROJECT_NAME}_DEPENDENCY_DIRS_VAR} )
 
 
 ## this project headers and sources enumeration section
