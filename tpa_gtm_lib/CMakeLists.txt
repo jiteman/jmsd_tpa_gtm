@@ -1,13 +1,13 @@
 cmake_minimum_required( VERSION 3.7.1 )
 
-project( jmsd_tpa_gtm_lib C CXX )
+project( tpa_gtm_lib C CXX )
 
 
 JMSD_SHOW_PROJECT_HEADER()
 
 
-include( ${JMSD_COMPONENT_CMAKE_SETTINGS_PATH}/jmsd-tpa-gtm-lib-set-compiler-settings.cmake )
-set( JMSD_THIS_PROJECT_SOURCE_ROOT ${JMSD_COMPONENT_SOURCE_ROOT_PATH}/jmsd_tpa_gtm )
+include( ${JMSD_COMPONENT_CMAKE_SETTINGS_PATH}/tpa-gtm-lib-set-compiler-settings.cmake )
+set( JMSD_THIS_PROJECT_SOURCE_ROOT ${JMSD_COMPONENT_SOURCE_ROOT_PATH}/tpa_gtm )
 
 
 ## include dependencies

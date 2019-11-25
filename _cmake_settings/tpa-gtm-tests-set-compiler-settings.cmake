@@ -1,4 +1,4 @@
-set( JMSD_COMPONENT_BASE_NAME jmsd-tpa-gtm )
+set( JMSD_COMPONENT_BASE_NAME tpa-gtm )
 set( JMSD_COMPONENT_LAST_NAME tests )
 
 
